@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba2656;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-light-2);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-2);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 120rem;
+}
+
+.header {
+  height: 10rem;
+  background-color: #fff;
+  border-bottom: 3px solid var(--color-grey-light-2);
+
+  padding: 16px;
+  color: #333;
+}
+
+.header--nav {
+  position: relative;
+  top: 2rem;
+}
+
+.header--profile {
+  position: absolute;
+  right: 0%;
+  top: -4rem;
+  margin-right: 2rem;
+}
+
+#profile-name {
+  display: inline;
+  margin-right: 3.125rem;
+  position: relative;
+  bottom: 2.5rem;
+}
+
+img {
+  margin-top: 24px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.content {
+  margin: 0rem auto;
+  max-width: 80%;
+  position: relative;
+}
+
+/*-------------------------- select boxes---------------------*/
+select {
+  appearance: none;
+  width: 15rem;
+  margin-right: 3.75rem;
+  border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -ms-border-radius: 9px 9px 9px 9px;
+  -o-border-radius: 9px 9px 9px 9px;
+  padding: 4px 10px;
+}
+
+.search {
+  max-width: 100%;
+  position: relative;
+}
+
+.search__filter:first-child,
+.search__filter:nth-child(2) {
+  margin-right: 1.25rem;
+}
+
+/*search button*/
+.search-container {
+  display: inline;
+  margin-left: 0;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  border: var(--color-primary-dark) 1px solid;
+  border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -ms-border-radius: 9px 9px 9px 9px;
+  -o-border-radius: 9px 9px 9px 9px;
+  height: 30px;
+}
+
+.search__input {
+  height: 100%;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  outline-color:transparent;
+  border: none;
+ 
+}
+
+#search-button {
+  height: 100%;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 4px 6px;
+}
+
+.search__movie {
+  margin-left: 0px;
+}
+
+/*
+.search__input{
+  width: 50%;
+  padding: 2px 2px;
+  color: #333;
+ outline: none;
+ height: 25px;
+ border-top-left-radius: 9px;
+ border-bottom-left-radius: 9px;
+
+}
+
+#search-button{
+  padding: 2px 2px;  
+  position: relative;
+  height: 25px;
+  right: 4px;
+-webkit-border-radius: 0px 5px 5px 0px;
+-moz-border-radius: 0px 5px 5px 0px;
+border-radius: 0px 5px 5px 0px;
+cursor: pointer;
+} */
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 3rem;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  /* padding: 1rem; */
+}
+
+table th,
+table td {
+  padding: 0.625rem;
+  text-align: center;
+  color: var(--color-grey-dark-1);
+}
+
+table th {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+table td {
+  font-size: 1.5rem;
+  /* letter-spacing: .1rem; */
+}
+
+/*pagination style*/
+.pagination {
+  display: inline-block;
+  margin-top: 3rem;
+
+  position: absolute;
+  right: 0%;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
